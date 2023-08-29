@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<p style=" margin-bottom: 2.5%;margin-top: 5%; margin-left: 10%;font-stretch: expanded; color: #2B2B68; font-family: poppins,bold; font-weight: 650; font-size: 200%;"> Produits Recommandés</p>
+<section class="categorie" >
+  <div claas="container-fluid" >
+
+    <div class="slider-wrap">
+      <div class="slider-main">
+        <div  *ngFor="let cat of commonProducts"class="item">
+          <a class="btn btn-primary" (click)="addtofave(cat)"style="width: 11%; border:#FF5330; background-color: #FF5330; height:32px; border-radius: 50%; margin-left: 85%;margin-top: 3%;color: #FF5330;"><i class="bi bi-heart fa-9xm" style="margin-left: -30%; margin-top:-40%;color:white"></i></a>
+
+          <img class="card-img-top img-responsive"(click)="onProductDetails(cat)"
+          src="data:image/png;base64,{{cat.imageURL}}"
+          style = "height :250px;width:220px;margin-left: 45px;margin-top:3% ">
+          <div class="text">{{cat.name}}  <p style="margin-top: 10%; color: #FF5330">{{cat.prix_de_vente}} TN </p> </div>
+
+          <div><button (click)="addCart(cat)"style= "margin-top: 13%; padding-left: 10%;margin-left: 85%;position: relative; width: 20%;border:#2B2B68; background-color:#2B2B68 ;border-radius: 0%; size: 2% ;padding:0%; width: 10% ;color: white ;"><i class="bi bi-cart3 fa-2xm	"></i></button>
+          </div>
+        </div>
+
+      </div>
+         <div class="button-area">
+           <a class="btn" class="prev" appPrev><i class="bi bi-chevron-left fa-4x"></i></a>
+           <a class="btn" class="next" appNext><i class="bi bi-chevron-right fa-4x"></i></a>
+         </div>
+    </div>
+  </div>
+</section>
+
+
+</body>
+</html>

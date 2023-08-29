@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<section class="categorie" >
+  <div claas="container-fluid" >
+
+    <div class="slider-wrap">
+      <div class="slider-main">
+        <div  *ngFor="let cat of comm"class="item">
+          <p class="text">{{cat.nommarque}}  <p>
+          <img class="card-img-top img-responsive"
+          src="data:image/png;base64,{{cat.logo}}"
+          style = "height :80px;width:80px;margin-left: 40px;margin-top:30% ">
+          <div class="deals-pr d-flex justify-content-between">
+            <button class="deals-btn" type="submit">Sélectionner</button>
+            <div class="promo">
+              <p>-20%</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+         <div class="button-area">
+           <a class="btn" class="prev" appPrev><i class="bi bi-chevron-left fa-4x"></i></a>
+           <a class="btn" class="next" appNext><i class="bi bi-chevron-right fa-4x"></i></a>
+         </div>
+    </div>
+  </div>
+</section>
+
+
+</body>
+</html>

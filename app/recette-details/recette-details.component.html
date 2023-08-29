@@ -1,0 +1,75 @@
+<section class="recipe mt-5 mb-5">
+  <div class="container recipe">
+      <div class="row">
+          <div class="list-user-item  d-flex gap-2  ">
+              <h1>{{recette.nomRecette}}</h1>
+          </div>
+      </div>
+      <div class="row ">
+          <div class="col-lg-8 col-sm-12 mt-5">
+              <img style="max-width: 70%; margin-left: 15%;" src="data:image/png;base64,{{recette.imageRecette}}" class="recipe-image img-fluid" width="840px" height="500px ">
+          </div>
+          <div class="col-lg-4 col-sm-12 recipe-details mt-5">
+              <h3 class="mt-4 text-center ">Liste des ingredients</h3>
+                  <div class=" d-flex gap-5 details-txt " *ngFor="let product of products">
+                      <a href="/product/{{product.id}}" target="_blank">
+                          <h2>{{product.name}}</h2>
+                      </a>
+                  </div>
+                  <!-- <div class=" d-flex gap-5  details-txt " >
+                      <p class="col-8">Calories</p>
+                      <p class="col-4">219.9 kcal</p>
+                  </div>
+                  <div class=" d-flex gap-5 details-txt">
+                      <p class="col-8">Graisse totale</p>
+                      <p class="col-4">10.7g</p>
+                  </div>
+                  <div class=" d-flex gap-5 details-txt">
+                      <p class="col-8">Protein</p>
+                      <p class="col-4">7.9g</p>
+                  </div>
+                  <div class=" d-flex gap-5 details-txt">
+                      <p class="col-8">Glucides</p>
+                      <p class="col-4">22.3g</p>
+                  </div>
+                  <div class=" d-flex gap-5 details-txt">
+                      <p class="col-8">Cholestérol</p>
+                      <p class="col-4">37.4mg</p>
+                  </div>
+                  <p class="text-center mt-5  ">adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                      dolore magna aliqua</p> -->
+          </div>
+
+      </div>
+      <div >
+          <div class="row mt-5">
+              <div class="col-lg-8 col-sm-12">
+                  <h2>Description</h2>
+                  <div class="description">
+                      {{recette.description}}
+                  </div>
+                  <img style="margin-left: 20%;" class="cook-img mt-3 desc-text img-fluid" src="../../assets/image/cook-2.jpg" width="60%">
+              </div>
+              <div class="col-lg-4 col-sm-12  ">
+                  <h3>Autre</h3>
+                  <div>
+                      <div class=" list-autre-item  d-flex gap-2 mt-3 " *ngFor="let rec of recettes">
+                          <a href="/recetteDetails/{{rec.id}}">
+                              <img src="data:image/png;base64,{{rec.imageRecette}}" alt="twbs" width="60%" height="100px" class="rounded  autre-img">
+                          </a>
+                          <div class="d-flex gap-2 w-40 justify-content-between mt-1 ">
+                              <div>
+                                  <p class="mb-0 recipe-owner  ">{{rec.nomRecette}}</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- <div class="mt-5" >
+                      <img src="../../assets/image/Ads.png" width="100%" height="400px"/>
+                  </div> -->
+              </div>
+          </div>
+      </div>
+  </div>
+
+</section>
